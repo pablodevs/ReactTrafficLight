@@ -1,13 +1,59 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -50px;
+    width: 100px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: black;
 
-*/
+    &:before {
+        position: absolute;
+        top: -100px;
+        content: "";
+        background-color: rgb(0, 0, 0);
+        width: 20px;
+        height: 100px;
+    }
+}
+
+.red-light,
+.orange-light,
+.green-light {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.red-light {
+    background-color: rgb(125, 0, 0);
+}
+.orange-light {
+    background-color: rgb(125, 87, 0);
+    margin: 0.3rem 0 0.3rem 0;
+}
+.green-light {
+    background-color: rgb(0, 87, 0);
+}
+
+.red-glow {
+    background-color: rgb(255, 0, 0);
+    box-shadow: rgb(255, 120, 120) 0px 0px 70px 4px;
+}
+.orange-glow {
+    background-color: rgb(255, 203, 32);
+    box-shadow: rgb(255, 219, 151) 0px 0px 70px 4px;
+}
+.green-glow {
+    background-color: rgb(0, 255, 0);
+    box-shadow: rgb(136, 255, 136) 0px 0px 70px 4px;
+}
